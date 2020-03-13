@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+
+<title>Credit Card Frued Detection</title>
+
+<!-- Meta-Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //Meta-Tags -->
+
+<!-- Custom-Style-Sheet -->
+<link rel="{{ url_for('static', filename='css/'+'bootstrap.css') }}"	type="text/css" media="all">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/'+'style.css') }}" 	type="text/css" media="all">
+<!-- //Custom-Style-Sheet -->
+
+<!-- Fonts -->
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" type="text/css" media="all">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700"			   type="text/css" media="all">
+<!-- //Fonts -->
+
+<!-- Style -->
+<style type="text/css">
+
+	.wrap {
+		max-width: 980px;
+		margin: 10px auto 0;
+	}
+	#steps {
+		margin: 80px 0 0 0;
+	}
+	.commands {
+		overflow: hidden;
+		margin-top: 30px;
+	}
+	.prev {
+		float:left
+	}
+
+	.error {
+		color: #FFC107;
+	}
+	.next, .submit {
+		float:right
+	}
+	#progress {
+		position: relative;
+		height: 5px;
+		background-color: #eee;
+		margin-bottom: 50px;
+	}
+	#progress-complete {
+		border: 0;
+		position: absolute;
+		height: 5px;
+		min-width: 10px;
+		background-color: #F44336;
+		transition: width .2s ease-in-out;
+	}
+
+	@media screen and (max-width: 966px) {
+		#progress {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (max-width: 320px) {
+		#progress {
+			margin-bottom: 20px;
+		}
+	}
+
+</style>
+<!-- //Style -->
+
+</head>
+<!-- //Head -->
+
+
+
+	<!-- Body -->
+	<body>
+
+		<h1>Credit Card Frued Detection</h1>
+
+		<div class="containerw3layouts-agileits">
+
+			
+
+			<form action="{{ url_for('predict')}}"method="post">
+
+				<fieldset>
+					<legend>Transaction Result : {{ prediction_text }}</legend>
+					<div class="form-group agileinfo">
+						<textarea name="trans" rows="6" required class="form-control" placeholder="Transaction"></textarea>
+					</div>
+					
+					
+				</fieldset>
+				<p>
+<button id="submit" class="btn wthree btn-primary submit">Predict!</button>
+				</p>
+
+			</form>
+
+		</div>
+
+		<!-- Necessary-JavaScript-Files-&-Links -->
+
+			<!-- Default-JavaScript --><script type="text/javascript" src="{{ url_for('static', filename='js/'+'jquery.min.js') }}"></script>
+			
+
+		<!-- //Necessary-JavaScript-Files-&-Links -->
+
+
+
+	</body>
+	<!-- //Body -->
+
+
+
+</html>
