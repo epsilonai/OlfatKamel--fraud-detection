@@ -1,4 +1,4 @@
-# CreditAPI
+# fraud-detection
 
 ML-Model-Flask-Deployment
 This is a demo project to predict credit card frued detection using Flask API
@@ -22,3 +22,7 @@ This would create a serialized version of our model into a file model.pkl
 
 Run app.py using below command to start Flask API
 python app.py
+
+dataset: https://www.kaggle.com/mlg-ulb/creditcardfraud
+
+heroku: https://cryptic-refuge-12933.herokuapp.com/
